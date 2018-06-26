@@ -51,4 +51,26 @@ return [
 	// news
 	'news' => 'OASES新闻',
 	'news_more' => '查看更多',
+
+	// 底部
+	'join' => '加入社区',
+	'telegram' => 'Telegram',
+	'twitter' => '推特',
+	'facebook' => '脸书',
+	'wechat' => '微信',
+
+	'resource' => '资源',
+	'book' => 'OASES项目白皮书',
+
+	'follow' => '关注',
+	'follow_weibo' => '微博',
+	'follow_wechat' => '微信',
+	'follow_news' => '新闻',
+
+	'contact' => '联系我们',
+	'contact_email' => 'oases@oases.pro',
+	'email' => '邮箱',
+
+
+
 ];

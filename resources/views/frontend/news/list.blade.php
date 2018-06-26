@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="contanier news-more-warp">
-        <a href="javascript:;" class="btn btn-more">查看更多</a>
+        <a data-method="get" data-url="/news?page=1" href="javascript:;" class="btn btn-more">@lang('index.news_more')</a>
     </div>
 </section>
 @endsection
