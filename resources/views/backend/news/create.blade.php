@@ -1,5 +1,6 @@
 @extends('backend.layouts.admin')
 @section('styles')
+    <link href="{{ asset('vendor/bootstrap-fileinput/bootstrap-fileinput.css')}}" rel="stylesheet" type="text/css" />
     @include('vendor.ueditor.assets')
 @endsection
 @section('content')
@@ -38,7 +39,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-3"><em class="font-red">* </em> 发稿日期</label>
                     <div class="col-md-9">
-                        <input type="text" name="publish_at" data-type="laydate" placeholder="发稿日期" class="form-control">
+                        <input type="text" name="publish_at" data-type="laydate" readonly placeholder="发稿日期" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
@@ -52,12 +53,30 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="control-label col-md-3"><em class="font-red">* </em> 新闻列表图</label>
+                    <div class="col-md-9">
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-new thumbnail" style="width: 360px; height: 218px;">
+                                <img src="http://www.placehold.it/360x218/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
+                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 360px; max-height: 218px;"> </div>
+                            <div>
+                                <span class="btn default btn-file">
+                                    <span class="fileinput-new"> Select image </span>
+                                    <span class="fileinput-exists"> Change </span>
+                                    <input type="file" name="..."> </span>
+                                <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                            </div>
+                        </div>
+                        <div class="clearfix margin-top-10">
+                            <span class="label label-danger">备注：</span> 必须保证图片大小为360x218的大小，不然到了页面会很丑</div>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="control-label col-md-3"><em class="font-red">* </em> 新闻详情</label>
                     <div class="col-md-9">
                         <div class="row">
                             <div class="col-md-12">
                                 <h4>中文：</h4>
-                                
                                 <!-- 编辑器容器 -->
                                 <script id="zh_container" name="zh_content" type="text/plain"><p>这里我可以写一些输入提示</p></script>
                                 <!-- 实例化编辑器 -->
@@ -109,4 +128,12 @@
         </form>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script src="{{ asset('vendor/bootstrap-fileinput/bootstrap-fileinput.js')}}" type="text/javascript"></script>
+<script>
+    $(function(){
+        PVJs.rendre.laydate();
+    })
+</script>
 @endsection

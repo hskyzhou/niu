@@ -38,6 +38,9 @@
         $(function() {
             $("#mainmenu a[href*='#'], a[href*='#']").bind('click', function(event) {
                 var $anchor = $(this);
+                if(this.href.indexOf('http://') > -1 || this.href.indexOf('https://') >-1){
+                    window.location.href = this.href;
+                }
                 if(window.location.href.split('#')[0] != this.href.split('#')[0] &&
                     this.href.indexOf('index.html') > -1){
                     window.location.href = this.href;

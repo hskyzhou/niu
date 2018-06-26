@@ -1,4 +1,11 @@
 @extends('backend.layouts.admin')
+@section('styles')
+<style>
+    .but-group>a{
+        margin: 0 10px;
+    }
+</style>
+@endsection
 @section('content')
     <div class="portlet light bordered">
         <div class="portlet-title">
@@ -7,7 +14,7 @@
                 <span class="caption-subject font-green sbold uppercase">新闻管理</span>
             </div>
         </div>
-        <div class="portlet-body">
+        <div class="portlet-body table-portlet">
             <div class="table-toolbar">
                 <div class="row">
                     <div class="col-md-6">
@@ -17,11 +24,6 @@
                     </div>
                 </div>
             </div>
-           <p>
-                列表使用 datatable [$html->table()] 这种输出形式 <br>
-                列表字段只显示中文并包含：【序号】/【新闻标题】/【发布时间】/【是否显示首页】/操作【修改/删除/设置到首页】<br>
-                （列表排序默认优先显示置顶首页的新闻，其次按照时间降序排序）
-            </p>
             {!! $html->table() !!}
         </div>
     </div>
@@ -31,4 +33,39 @@
     <script src="{{asset('/vendor/datatables/datatables.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('/vendor/datatables/plugins/bootstrap/datatables.bootstrap.js')}}" type="text/javascript"></script>
     {!! $html->scripts() !!}
+    <script>
+        $(function(){
+            $('.table-portlet').on('click', '.but-group>a[data-url]', function(){
+                var that = $(this);
+                var type = that.attr('data-method');
+                if(type == "delete"){
+                    layer.confirm("确定执行删除操作？", {
+                        btn: ['确定','取消']
+                    }, function(){
+                        PVJs.ajax({
+                            url: that.attr('data-url'),
+                            type: type,
+                            success: function(resp){
+                                layer.msg(resp.message);
+                                if(resp.result){
+                                    window.LaravelDataTables.dataTableBuilder.ajax.reload();
+                                }
+                            }
+                        })
+                    })
+                }else if(type == "get"){
+                    PVJs.ajax({
+                        url: that.attr('data-url'),
+                        type: 'get',
+                        success: function(resp){
+                            layer.msg(resp.message);
+                            if(resp.result){
+                                window.LaravelDataTables.dataTableBuilder.ajax.reload();
+                            }
+                        }
+                    })
+                }
+            })
+        })
+    </script>
 @endsection

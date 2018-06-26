@@ -1,16 +1,17 @@
 <?php 
 
 return [
-	'index' => "index",
+	'index' => "Index",
 
-	'about' => 'about',
-	'project' => 'project',
+	'about' => 'About',
+	'project' => 'Project',
 
-	'environment' => 'environment',
+	'environment' => 'Environment',
 
-	'resource' => 'resource',
-	'whitebook' => 'whitebook',
-	'news' => 'news',
+	'resource' => 'Resource',
+	'whitebook' => 'Whitebook',
+	'news' => 'News',
 
-	'join' => 'join',
+	'join' => 'Join',
+    'lang' => 'Language'
 ];

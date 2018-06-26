@@ -1,6 +1,7 @@
-@extends('frontend.layouts.app')
+@extends('frontend.layouts.other')
 
 @section('content')
+
 <div class="news-banner" id="news-banner">
     <img src="{{ asset('frontend/assets/img/oases/oases-logo-title.png') }}" alt="" class="news-banner-title">
 </div>
