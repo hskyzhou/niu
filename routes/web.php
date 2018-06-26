@@ -24,38 +24,30 @@ Route::get('/detail', function(){
 });
 
 // backend
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('login', function(){
-        return view('backend.auth.login');
-    });
-    Route::get('register', function(){
-        return view('backend.auth.register');
-    });
-    Route::get('email', function(){
-        return view('backend.auth.passwords.email');
-    });
-    Route::get('reset', function(){
-        return view('backend.auth.passwords.reset');
-    });
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function ($router) {
 
-    //相关页面
-    //新闻
-    Route::group(['prefix' => 'news'], function(){
-        Route::get('list', function(){
-            return view('backend.news.list');
+    /*登录*/
+    Auth::routes();
+
+    // Route::get('login', function(){
+    //     return view('backend.auth.login');
+    // });
+    // Route::get('register', function(){
+    //     return view('backend.auth.register');
+    // });
+    // Route::get('email', function(){
+    //     return view('backend.auth.passwords.email');
+    // });
+    // Route::get('reset', function(){
+    //     return view('backend.auth.passwords.reset');
+    // });
+    $router->group(['namespace' => 'Backend'], function ($router) {
+        $router->group(['prefix'=>'news', 'as'=>'news.'], function ($router) {
+            $router->get('setindex/{id}', [
+                'uses' => 'NewsController@setIndex',
+                'as' => 'setindex',
+            ]);
         });
-        Route::get('create', function(){
-            return view('backend.news.create');
-        });
-    });
-    //新闻分类
-    Route::group(['prefix' => 'category'], function(){
-        Route::get('list', function(){
-            return view('backend.category.list');
-        });
-        Route::get('create', function(){
-            return view('backend.category.create');
-        });
+        $router->resource('news', 'NewsController');
     });
 });
-

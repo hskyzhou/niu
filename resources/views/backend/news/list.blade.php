@@ -22,7 +22,13 @@
                 列表字段只显示中文并包含：【序号】/【新闻标题】/【发布时间】/【是否显示首页】/操作【修改/删除/设置到首页】<br>
                 （列表排序默认优先显示置顶首页的新闻，其次按照时间降序排序）
             </p>
-            {{-- {!! $html->table() !!} --}}
+            {!! $html->table() !!}
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{asset('/vendor/datatables/datatables.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('/vendor/datatables/plugins/bootstrap/datatables.bootstrap.js')}}" type="text/javascript"></script>
+    {!! $html->scripts() !!}
 @endsection
