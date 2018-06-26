@@ -12,7 +12,7 @@
    
     <div class="content-wrap">
         <div class="form-box">
-            <form class="login-form" method="POST" action="{{route('admin.login')}}">
+            <form class="login-form" method="POST" action="{{route('login')}}">
                 {{ csrf_field() }}
                 {{-- @include(getThemeTemplate('backend.layouts.partical.admin.error')) --}}
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

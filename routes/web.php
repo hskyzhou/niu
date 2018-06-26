@@ -34,17 +34,23 @@ $router->group(['namespace' => "Frontend", 'middleware' => 'languagepackage'], f
 });
 
 // backend
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function ($router) {
-
+Route::group(['prefix' => 'admin'], function ($router) {
     /*登录*/
     Auth::routes();
-    $router->group(['namespace' => 'Backend'], function ($router) {
-        $router->group(['prefix'=>'news', 'as'=>'news.'], function ($router) {
-            $router->get('setindex/{id}', [
-                'uses' => 'NewsController@setIndex',
-                'as' => 'setindex',
-            ]);
+
+    $router->get('/', function () {
+        return redirect()->route('admin.news.index');
+    });
+
+    $router->group(['as' => 'admin.'], function ($router) {
+        $router->group(['namespace' => 'Backend', 'middleware' => ['web', 'auth']], function ($router) {
+            $router->group(['prefix'=>'news', 'as'=>'news.'], function ($router) {
+                $router->get('setindex/{id}', [
+                    'uses' => 'NewsController@setIndex',
+                    'as' => 'setindex',
+                ]);
+            });
+            $router->resource('news', 'NewsController');
         });
-        $router->resource('news', 'NewsController');
     });
 });
