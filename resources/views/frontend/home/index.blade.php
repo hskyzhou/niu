@@ -16,11 +16,11 @@
         <div class="page1-box-title">
             <h1 class="page1-title">
                 <img src="{{ asset('frontend/assets/img/oases/oases-logo-title.png') }}" alt="">
-                <p class="slogan">chain to the miracle</p>
+                <p class="slogan">@lang('index.chain')</p>
                 <span></span>
             </h1>
             <div class="page1-cont">
-                <p>下一代区块链环保技术及能源管理系统</p>
+                <p>@lang('index.sys')</p>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h2>倡导绿色生活理念</h2>
+                        <h2>@lang('index.idea')</h2>
                         <span class="section-title-line"></span>
                     </div>
                 </div>
@@ -64,52 +64,52 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4 work_area-item">
                             <div class="work_areabox bg-xt">
-                                <p>一个系统</p>
+                                <p>@lang('index.idea1')</p>
                             </div>
                             <div class="work_areabox-hidden">
                                 <div class="work_area-item-title">
-                                    <span>一个系统</span>
+                                    <span>@lang('index.idea1')</span>
                                     <span class="work_area-icon xt-icon"></span>
                                 </div>
                                 <div class="work_area-item-cont">
-                                    <h3>OASES生态系统</h3>
-                                    <p>OASES生态系统旨在使用区块链技术并结合实体经济产业，为解决全球范围内如何减少环境污染、降低能耗、监控排放，以及环境大数据的收集、分析等问题提供完善的方案，促进全球环保标准的建立，和各类能源资产交易市场的形成，构建更加环保和节能的世界。</p>
+                                    <h3>@lang('index.idea1_1')</h3>
+                                    <p>@lang('index.idea1_2')</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4 work_area-item item-bg2">
                             <div class="work_areabox bg-wd">
-                                <p>两个维度</p>
+                                <p>@lang('index.idea2')</p>
                             </div>
                             <div class="work_areabox-hidden">
                                 <div class="work_area-item-title">
-                                    <span>两个维度</span>
+                                    <span>@lang('index.idea2')</span>
                                     <span class="work_area-icon wd-icon"></span>
                                 </div>
                                 <div class="work_area-item-cont">
-                                    <h3>物质维度（OMF）</h3>
-                                    <p>物质维度决定了物质的状态及能量的性质，是OASES物质流的理论基础。</p>
-                                    <h3>信息维度（OIF）</h3>
-                                    <p>信息维度认为，信息在传递之间同样是具有能量的，是OASES信息流的理论基础。</p>
+                                    <h3>@lang('index.idea2_1')</h3>
+                                    <p>@lang('index.idea2_2')</p>
+                                    <h3>@lang('index.idea2_3')</h3>
+                                    <p>@lang('index.idea2_4')</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4 work_area-item item-bg3">
                             <div class="work_areabox bg-jg">
-                                <p>三个结构</p>
+                                <p>@lang('index.idea3')</p>
                             </div>
                             <div class="work_areabox-hidden">
                                 <div class="work_area-item-title">
-                                    <span>三个结构</span>
+                                    <span>@lang('index.idea3')</span>
                                     <span class="work_area-icon jg-icon"></span>
                                 </div>
                                 <div class="work_area-item-cont">
-                                    <h3>时空结构（OSS）</h3>
-                                    <p>OASES时空结构（OSS）定义了的生态系统中能量的表现形式。</p>
-                                    <h3>组分结构（OCDS）</h3>
-                                    <p>OASES组分结构（OCDS）定义了生态系统中物质的能量结构和特征。</p>
-                                    <h3>循环结构（OFS）</h3>
-                                    <p>OASES生态系统中的循环结构是构成能量循环和能量转化的关键途径。</p>
+                                    <h3>@lang('index.idea3_1')</h3>
+                                    <p>@lang('index.idea3_2')</p>
+                                    <h3>@lang('index.idea3_3')</h3>
+                                    <p>@lang('index.idea3_4')</p>
+                                    <h3>@lang('index.idea3_5')</h3>
+                                    <p>@lang('index.idea3_6')</p>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2>基于区块链技术</h2>
+                    <h2>@lang('index.block')</h2>
                     <span class="section-title-line"></span>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                             <div class="icon-box-img">
                                 <img src="{{ asset('frontend/assets/img/svg/icon1.svg') }}" width="63" height="63" alt="">
                             </div>
-                            <h3>智能合约</h3>
+                            <h3>@lang('index.block1')</h3>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4">
@@ -143,7 +143,7 @@
                             <div class="icon-box-img">
                                 <img src="{{ asset('frontend/assets/img/svg/icon2.svg') }}" width="63" height="63" alt="">
                             </div>
-                            <h3>共识协议</h3>
+                            <h3>@lang('index.block2')</h3>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4">
@@ -151,7 +151,7 @@
                             <div class="icon-box-img">
                                 <img src="{{ asset('frontend/assets/img/svg/icon3.svg') }}" width="63" height="63" alt="">
                             </div>
-                            <h3>激励机制</h3>
+                            <h3>@lang('index.block3')</h3>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4">
@@ -159,7 +159,7 @@
                             <div class="icon-box-img">
                                 <img src="{{ asset('frontend/assets/img/svg/icon4.svg') }}" width="63" height="63" alt="">
                             </div>
-                            <h3>分布式存储</h3>
+                            <h3>@lang('index.block4')</h3>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4">
@@ -167,7 +167,7 @@
                             <div class="icon-box-img">
                                 <img src="{{ asset('frontend/assets/img/svg/icon5.svg') }}" width="63" height="63" alt="">
                             </div>
-                            <h3>分布式运算</h3>
+                            <h3>@lang('index.block5')</h3>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-4">
@@ -175,7 +175,7 @@
                             <div class="icon-box-img">
                                 <img src="{{ asset('frontend/assets/img/svg/icon6.svg') }}" width="63" height="63" alt="">
                             </div>
-                            <h3>虚拟机</h3>
+                            <h3>@lang('index.block6')</h3>
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h2>行业中的应用</h2>
+                        <h2>@lang('index.use')</h2>
                         <span class="section-title-line"></span>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/036-bicycle.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">倡导更环保的出行方式</h2>
+                            <h2 class="item-title">@lang('index.use_1')</h2>
                         </div>
                     </div>
                 </div>
@@ -210,7 +210,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/020-car.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">推动新能源汽车的使用</h2>
+                            <h2 class="item-title">@lang('index.use_2')</h2>
                         </div>
                     </div>
                 </div>
@@ -220,7 +220,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/019-idea.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">促进物联网智能白色家电产业的节能减排</h2>
+                            <h2 class="item-title">@lang('index.use_3')</h2>
                         </div>
                     </div>
                 </div>
@@ -230,7 +230,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/022-green-energy.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">帮助均衡能源结构</h2>
+                            <h2 class="item-title">@lang('index.use_4')</h2>
                         </div>
                     </div>
                 </div>
@@ -240,7 +240,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/027-fuel.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">增强合同能源管理</h2>
+                            <h2 class="item-title">@lang('index.use_5')</h2>
                         </div>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/008-house.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">提高普通家庭网络及设备单位能耗使用效率</h2>
+                            <h2 class="item-title">@lang('index.use_6')</h2>
                         </div>
                     </div>
                 </div>
@@ -260,7 +260,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/012-recycle-sign.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">去中心化，可以追溯资源回收</h2>
+                            <h2 class="item-title">@lang('index.use_7')</h2>
                         </div>
                     </div>
                 </div>
@@ -270,7 +270,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/032-ecology-1.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">环境信息协调统一</h2>
+                            <h2 class="item-title">@lang('index.use_8')</h2>
                         </div>
                     </div>
                 </div>
@@ -280,7 +280,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/1green-earth.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">推荐环境及能源数据资源全面整合共享</h2>
+                            <h2 class="item-title">@lang('index.use_9')</h2>
                         </div>
                     </div>
                 </div>
@@ -290,7 +290,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/2ecology.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">帮助行业组织及政府部门科学制定生态环境政策，提高环境应急处理能力</h2>
+                            <h2 class="item-title">@lang('index.use_10')</h2>
                         </div>
                     </div>
                 </div>
@@ -300,7 +300,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/3renewable-energy.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">创新生态环境监管模式</h2>
+                            <h2 class="item-title">@lang('index.use_11')</h2>
                         </div>
                     </div>
                 </div>
@@ -310,7 +310,7 @@
                             <img src="{{ asset('frontend/assets/img/svg/4cpu.svg') }}" alt="">
                         </div>
                         <div class="item-cont">
-                            <h2 class="item-title">引入区块链+芯片技术，强化信息安全保障</h2>
+                            <h2 class="item-title">@lang('index.use_12')</h2>
                         </div>
                     </div>
                 </div>
@@ -323,52 +323,41 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h2><a href="list.html">OASES新闻</a></h2>
+                    <h2><a href="/news">@lang('index.news')</a></h2>
                     <span class="section-title-line"></span>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-4">
-                <a href="news-1.html" class="news-box">
-                    <div class="news-box-img">
-                        <img src="{{ asset('frontend/assets/img/oases/news1.jpg') }}" alt="">
+            @if (!$lastestNews->isEmpty())
+                @foreach($lastestNews as $key => $lastestNew)
+                    <div class="col-md-4 col-sm-4">
+                        <a href="{{ route('news.show', [$lastestNew->id]) }}" class="news-box">
+                            <div class="news-box-img">
+                                @if ($key == 0) 
+                                    <img src="{{ asset('frontend/assets/img/oases/news1.jpg') }}" alt="">
+                                @endif
+                                @if ($key == 1) 
+                                    <img src="{{ asset('frontend/assets/img/oases/news2.jpg') }}" alt="">
+                                @endif
+                                @if ($key == 2) 
+                                    <img src="{{ asset('frontend/assets/img/oases/news3.jpg') }}" alt="">
+                                @endif
+                            </div>
+                            <div class="news-box-info">
+                                <p class="news-time">{{ $lastestNew->publish_at}}</p>
+                                <h3>{{ $lastestNew->title }}</h3>
+                                <p class="news-detail">{{ str_limit(strip_tags($lastestNew->content), 30) }}</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="news-box-info">
-                        <p class="news-time">2018-06-05</p>
-                        <h3>全球首个环境及能源管理领域的区块链项目OASES Chain在世界环境日当天正式发布</h3>
-                        <p class="news-detail">2018年6月5日——世界环境日，美国EPC基金会联合新加坡OASES Foundation共同发布全球首个环境及能源管理领域的区块链项目OASES Chain（即OASES生态系统）。</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="news-2.html" class="news-box">
-                    <div class="news-box-img">
-                        <img src="{{ asset('frontend/assets/img/oases/news2.jpg') }}" alt="">
-                    </div>
-                    <div class="news-box-info">
-                        <p class="news-time">2018-06-05</p>
-                        <h3>全球首个环境及能源管理领域的区块链项目OASES Chain得到张文华先生高度评价</h3>
-                        <p class="news-detail">美国EPC基金会联合新加坡OASES Foundation共同发布全球首个环境及能源管理领域的区块链项目OASES生态系统。世界温州人联谊总会前副会长兼秘书长张文华先生...</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <a href="news-3.html" class="news-box">
-                    <div class="news-box-img">
-                        <img src="{{ asset('frontend/assets/img/oases/news3.jpg') }}" alt="">
-                    </div>
-                    <div class="news-box-info">
-                        <p class="news-time">2018-02-26</p>
-                        <h3>OASES Chain——环保区块链，为节能而生，为蓝天护航</h3>
-                        <p class="news-detail">全球首个环保区块链项目——OASESChain（OASES生态系统）携手浙江大学数字货币与区块链研究所、LinkedIn（美国硅谷领英公司）分布式技术实验室等...</p>
-                    </div>
-                </a>
-            </div>
+                    
+                @endforeach
+            @endif
         </div>
     </div>
     <div class="contanier news-more-warp index-more">
-        <a href="list.html" class="btn btn-more">查看更多</a>
+        <a href="/news" class="btn btn-more">@lang('index.news_more')</a>
     </div>
 </section>
 @endsection
