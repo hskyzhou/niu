@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return [
 	'index' => "首页",
@@ -13,4 +13,5 @@ return [
 	'news' => '新闻',
 
 	'join' => '加入社区',
+    'lang' => '语言'
 ];

@@ -1,16 +1,17 @@
 <?php 
 
 return [
-	'index' => "index",
+    'index' => "ホーム",
 
-	'about' => 'about',
-	'project' => 'project',
+    'about' => 'ABOUT',
+    'project' => 'プロジェクト',
 
-	'environment' => 'environment',
+    'environment' => '生態',
 
-	'resource' => 'resource',
-	'whitebook' => 'whitebook',
-	'news' => 'news',
+    'resource' => 'リソース',
+    'whitebook' => 'ホワイトペーパー',
+    'news' => 'ニュース',
 
-	'join' => 'join',
+    'join' => 'コミュニティ',
+    'lang' => '言語'
 ];

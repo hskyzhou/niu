@@ -3,7 +3,7 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo text-center">
-            <!-- <img src="{{ asset('/frontend/assets/img/oases/logo.png') }}" style="height: 50px;" alt=""> -->
+            <img src="{{ asset('/frontend/assets/img/oases/backend-logo.png') }}" style="height: 50px;    margin-top: 10px;" alt="">
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
             </div>

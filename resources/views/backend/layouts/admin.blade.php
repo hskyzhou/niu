@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="{{ app()->getLocale() }}" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="{{ app()->getLocale() }}" class="ie9 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="zh_CN" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="zh_CN" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="{{ app()->getLocale() }}">
+<html lang="zh_CN">
     <!--<![endif]-->
     <!-- BEGIN HEAD -->
     <head>

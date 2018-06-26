@@ -15,6 +15,9 @@ class NewsController extends Controller
     	if (request()->ajax()) {
     		return datatables()->collection(News::all())
 	        		->addColumn('action', 'backend.news.datatable')
+                    ->editColumn('is_index', function(News $news){
+                        return $news->is_index == '1' ? '是' : '否';
+                    })
 	        		->make(true);
 	    }
 
@@ -23,11 +26,11 @@ class NewsController extends Controller
 		];
 
     	$html = $builder->columns([
-            ['data' => 'id', 'name' => 'id', 'title' => '序号'],
+            ['data' => 'id', 'name' => 'id', 'title' => 'ID'],
             ['data' => 'zh_title', 'name' => 'zh_title', 'title' => '新闻标题'],
-            ['data' => 'publish_at', 'name' => 'publish_at', 'title' => '发布时间'],
-            ['data' => 'is_index', 'name' => 'is_index', 'title' => '是否显示首页'],
-            ['data' => 'action', 'name' => 'action', 'title' => '操作'],
+            ['data' => 'publish_at', 'name' => 'publish_at', 'title' => '发布时间', 'class' => 'text-center'],
+            ['data' => 'is_index', 'name' => 'is_index', 'title' => '是否显示首页', 'class' => 'text-center'],
+            ['data' => 'action', 'name' => 'action', 'title' => '操作', 'class' =>'text-center'],
         ])
         ->ajax([
 			'url' => route('admin.news.index'),

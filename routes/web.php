@@ -21,8 +21,9 @@ $router->group(['namespace' => "Frontend", 'middleware' => 'languagepackage'], f
 
     $router->get('/', [
         'uses' => 'HomeController@index',
+        'as' => 'home'
     ]);
-    
+
     $router->group(['prefix' => 'news', 'as' => 'news.'], function ($router) {
         $router->get('/', [
             'uses' => 'NewsController@index',
@@ -37,19 +38,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function ($router) {
 
     /*登录*/
     Auth::routes();
-
-    // Route::get('login', function(){
-    //     return view('backend.auth.login');
-    // });
-    // Route::get('register', function(){
-    //     return view('backend.auth.register');
-    // });
-    // Route::get('email', function(){
-    //     return view('backend.auth.passwords.email');
-    // });
-    // Route::get('reset', function(){
-    //     return view('backend.auth.passwords.reset');
-    // });
     $router->group(['namespace' => 'Backend'], function ($router) {
         $router->group(['prefix'=>'news', 'as'=>'news.'], function ($router) {
             $router->get('setindex/{id}', [
