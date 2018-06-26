@@ -11,26 +11,30 @@
                 <nav>
                     <div class="mainmenu text-right">
                         <ul id="nav" class="menu">
-                            <li><a href="#slider-section">首页</a></li>
+                            <li><a href="#slider-section">@lang('menu.index')</a></li>
                             <li class="dropdown current-menu-item current-menu-has-children">
-                                <a href="javascript:;">关于</a>
+                                <a href="javascript:;">@lang('menu.about')</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#work_area">项目</a></li>
+                                    <li><a href="#work_area">@lang('menu.project')</a></li>
                                     <!-- <li><a href="#our-team">团队</a></li> -->
                                 </ul>
                             </li>
-                            <li><a href="#crypcash-area">生态</a></li>
+                            <li><a href="#crypcash-area">@lang('menu.environment')</a></li>
                             <li class="dropdown current-menu-item current-menu-has-children">
-                                <a href="javascript:;">资源</a>
+                                <a href="javascript:;">@lang('menu.resource')</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ asset('frontend/assets/OASES_CHAIN_BUSINESS_WHITE_PAPER_V1.pdf') }}" onclick="javascript:window.location.href=this.href;">白皮书</a></li>
-                                    <li><a href="#news">新闻</a></li>
+                                    <li><a href="{{ asset('frontend/assets/OASES_CHAIN_BUSINESS_WHITE_PAPER_V1.pdf') }}" onclick="javascript:window.location.href=this.href;">@lang('menu.book')</a></li>
+                                    <li><a href="#news">@lang('menu.news')</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#footer-header">加入社区</a></li>
+                            <li><a href="#footer-header">@lang('menu.join')</a></li>
                         </ul>
                     </div>
                 </nav>
+
+                <a href="{{route('lang.change', ['zh'])}}">@lang('lang.zh')</a>
+                <a href="{{route('lang.change', ['en'])}}">@lang('lang.en')</a>
+                <a href="{{route('lang.change', ['jp'])}}">@lang('lang.jp')</a>
             </div>
         </div>
     </div>

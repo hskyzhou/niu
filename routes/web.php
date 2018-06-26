@@ -11,16 +11,25 @@
 |
 */
 //frontend
-Route::get('/', function () {
-    return view('frontend.home.index');
-});
+$router->group(['namespace' => "Frontend", 'middleware' => 'languagepackage'], function ($router) {
+    $router->group(['prefix' => "lang", 'as' => 'lang.'], function ($router) {
+        $router->get('change/{lang}', [
+            'uses' => "LangController@change",
+            'as' => 'change',
+        ]);
+    });
 
-Route::get('/news', function(){
-    return view('frontend.news.list');
-});
-
-Route::get('/detail', function(){
-    return view('frontend.news.detail');
+    $router->get('/', [
+        'uses' => 'HomeController@index',
+    ]);
+    
+    $router->group(['prefix' => 'news', 'as' => 'news.'], function ($router) {
+        $router->get('/', [
+            'uses' => 'NewsController@index',
+            'as' => "index",
+        ]);
+    });
+    $router->resource('news', 'NewsController');
 });
 
 // backend
