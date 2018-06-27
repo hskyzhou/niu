@@ -13,7 +13,7 @@
     </div>
     <div class="portlet-body form">
         @include('backend.layouts.partical.admin.error')
-        <form action="{{route('admin.news.store')}}" method="post" class="form-horizontal form-bordered form-row-stripped">
+        <form action="{{route('admin.news.store')}}" method="post" class="form-horizontal form-bordered form-row-stripped" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-body">
                 <div class="form-group">
@@ -63,7 +63,7 @@
                                 <span class="btn default btn-file">
                                     <span class="fileinput-new"> Select image </span>
                                     <span class="fileinput-exists"> Change </span>
-                                    <input type="file" name="..."> </span>
+                                    <input type="file" name="thumb"> </span>
                                 <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
                             </div>
                         </div>

@@ -334,15 +334,7 @@
                     <div class="col-md-4 col-sm-4">
                         <a href="{{ route('news.show', [$lastestNew->id]) }}" class="news-box">
                             <div class="news-box-img">
-                                @if ($key == 0) 
-                                    <img src="{{ asset('frontend/assets/img/oases/news1.jpg') }}" alt="">
-                                @endif
-                                @if ($key == 1) 
-                                    <img src="{{ asset('frontend/assets/img/oases/news2.jpg') }}" alt="">
-                                @endif
-                                @if ($key == 2) 
-                                    <img src="{{ asset('frontend/assets/img/oases/news3.jpg') }}" alt="">
-                                @endif
+                                <img src="{{ asset($lastestNew->thumb) }}" alt="">
                             </div>
                             <div class="news-box-info">
                                 <p class="news-time">{{ $lastestNew->publish_at}}</p>

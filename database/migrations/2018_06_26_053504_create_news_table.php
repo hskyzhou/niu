@@ -28,6 +28,7 @@ class CreateNewsTable extends Migration
             $table->tinyInteger('is_index')->nullable()->default(2)->comment('1-首页显示，2-首页不显示');
             $table->tinyInteger('category')->nullable()->comment('1-新闻,2-快讯,3-专访');
             $table->string('publish_at')->nullable()->comment('发布时间');
+            $table->string('thumb')->nullable()->comment('缩略图');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -48,7 +48,9 @@ class NewsController extends Controller
 
     public function store()
     {
-    	if (News::create(request()->all())) {
+    	if ($news = News::create(request()->all())) {
+            /*处理缩略图*/
+            $this->uploadThumb($news);
     		return redirect()->route('admin.news.index');
     	} else {
     		return rediect()->back();
@@ -67,6 +69,8 @@ class NewsController extends Controller
     public function update($id) {
     	if ($info = News::find($id)) {
 	    	if ($info->update(request()->all())) {
+                /*处理缩略图*/
+                $this->uploadThumb($info);
 	    		return redirect()->route('admin.news.index');
 	    	} else {
 	    		return rediect()->back();
@@ -112,5 +116,15 @@ class NewsController extends Controller
     	}
 
     	throw new Exception("新闻数据出错", 2);
+    }
+
+    private function uploadThumb($news)
+    {
+        if (request()->hasFile('thumb')) {
+            /*上传*/
+            $path = request()->file('thumb')->store('public/thumbs');
+            $news->thumb = 'storage/' . ltrim($path, 'public/');
+            $news->save();
+        }
     }
 }

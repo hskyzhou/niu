@@ -64,7 +64,7 @@
                                 <span class="btn default btn-file">
                                     <span class="fileinput-new"> Select image </span>
                                     <span class="fileinput-exists"> Change </span>
-                                    <input type="file" name="..."> </span>
+                                    <input type="file" name="thumb"> </span>
                                 <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
                             </div>
                         </div>
