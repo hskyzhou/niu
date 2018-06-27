@@ -13,7 +13,7 @@
     </div>
     <div class="portlet-body form">
         @include('backend.layouts.partical.admin.error')
-        <form action="{{route('admin.news.update', [$info->id])}}" method="post" class="form-horizontal form-bordered form-row-stripped">
+        <form action="{{route('admin.news.update', [$info->id])}}" method="post" class="form-horizontal form-bordered form-row-stripped" enctype="multipart/form-data">
             {{ csrf_field() }}
             {!! method_field('put') !!}
             <div class="form-body">
@@ -58,8 +58,8 @@
                     <div class="col-md-9">
                         <div class="fileinput fileinput-new" data-provides="fileinput">
                             <div class="fileinput-new thumbnail" style="width: 360px; height: 218px;">
-                                <img src="http://www.placehold.it/360x218/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
-                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 360px; max-height: 218px;"> </div>
+                                <img src="{{$info->thumb ? asset($info->thumb) : 'http://www.placehold.it/360x218/EFEFEF/AAAAAA&amp;text=no+image'}}" alt="" /> </div>
+                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 360px; max-height: 218px;"></div>
                             <div>
                                 <span class="btn default btn-file">
                                     <span class="fileinput-new"> Select image </span>
