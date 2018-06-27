@@ -20,6 +20,7 @@ class NewsController extends Controller
     				'content' => str_limit(strip_tags($item->content), 30),
     				'title' => $item->title,
     				'publish_at' => $item->publish_at,
+                    'thumb' => $item->thumb,
     			];
     		});
     	}
