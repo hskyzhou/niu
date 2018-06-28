@@ -25,7 +25,7 @@
     </script>
     @yield('styles')
 </head>
-<body>
+<body class="body_{{ config('app.locale') }}">
     <div id="app">
         @include('frontend.layouts.menu')
         <div class="main">

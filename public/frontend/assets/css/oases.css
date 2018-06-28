@@ -1,4 +1,3 @@
-
 body{
     overflow-x: hidden;
 }
@@ -7,6 +6,9 @@ body{
 }
 .logo>a>img{
     width: 190px;
+}
+#news>.container, .news-more-warp{
+    display: none;
 }
 /*dropdown-menu*/
 .mainmenu .current-menu-has-children:hover .dropdown-menu,
@@ -890,4 +892,20 @@ ul#kareeb_countdown li p {
     border-radius: 5px;
     color: #000;
     letter-spacing: 2px;
+}
+
+.body_en .icon-box h3{
+    min-height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body_en .work_area-item-cont p{
+    font-size: 13px;
+}
+.body_en .crypcash-area-item .item-cont h2{
+    font-size: 14px;
+}
+.body_jp .crypcash-area-item .item-cont h2{
+    font-size: 16px;
 }
