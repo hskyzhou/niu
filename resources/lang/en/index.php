@@ -1,26 +1,25 @@
-<?php 
+<?php
 
 return [
 	'chain' => 'chain to the miracle',
 	// sys
 	'sys' => 'The next generation blockchain environmental protection technology and energy management system',
-
 	// idea
 	'idea' => 'Advocate the concept of green living',
 	'idea1' => 'One System',
 	'idea1_1' => 'OASES ecosystem',
 	'idea1_2' => 'OASES ecological system is designed to use blockchain technology combined with the real economy industry, in order to provide the perfect solutions for the problems e.g. how to reduce environmental pollution, reduce energy consumption and emissions monitoring, as welldata collection and analysis, promoting the establishment of the global environmental protection standard, and the formation of all kinds of energy assets trading market, building a more environmentally protective and energy saving world.',
 	'idea2' => 'Two Dimensions',
-	'idea2_1' => '物质维度（OMF）',
+	'idea2_1' => 'The material dimension',
 	'idea2_2' => 'The material dimension determines the state of matter and the nature of energy, which is the theoretical basis of OASES material flow.',
-	'idea2_3' => '信息维度（OIF）',
+	'idea2_3' => 'The information dimension',
 	'idea2_4' => 'The information dimension believes that information also has energy between transmission, which is the theoretical basis of OASES information flow.',
 	'idea3' => 'Three Structures',
-	'idea3_1' => '时空结构（OSS）',
+	'idea3_1' => 'OASES space-time structure (OSS)',
 	'idea3_2' => 'OASES space-time structure (OSS) defines an expression of energy in ecosystem.',
-	'idea3_3' => '组分结构（OCDS）',
+	'idea3_3' => 'OASES component structure (OCDS)',
 	'idea3_4' => 'OASES component structure (OCDS) defines the energy structure and characteristics of substances in the ecosystem.',
-	'idea3_5' => '循环结构（OFS）',
+	'idea3_5' => 'The circulation structure',
 	'idea3_6' => 'The circulation structure of OASES ecosystem is the key way to form energy circulation and energy transformation.',
 
 
@@ -34,7 +33,7 @@ return [
 	'block6' => 'Virtual Machine',
 
 	// use
-	'use' => '行业中的应用',
+	'use' => 'Applications in the industry',
 	'use_1' => 'Advocate a more enveromental friendly why of getting around',
 	'use_2' => 'Promote the use of new energy vehicles',
 	'use_3' => 'Promote energy conservation and emission reduction in the iot smart white home appliance industry',
@@ -60,7 +59,7 @@ return [
 	'wechat' => 'Wechat',
 
 	'resource' => 'Resource',
-	'book' => 'OASES项目白皮书',
+	'book' => 'OASES CHAIN_WHITE PAPER V1',
 
 	'follow' => 'Follow',
 	'follow_weibo' => 'Weibo',
