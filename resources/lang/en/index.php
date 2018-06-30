@@ -59,7 +59,7 @@ return [
 	'wechat' => 'Wechat',
 
 	'resource' => 'Resource',
-	'book' => 'OASES CHAIN_WHITE PAPER V1',
+	'book' => 'OASES CHAIN_WHITE PAPER',
 
 	'follow' => 'Follow',
 	'follow_weibo' => 'Weibo',
