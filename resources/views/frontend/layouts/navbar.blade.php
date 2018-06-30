@@ -23,7 +23,7 @@
                             <li class="dropdown current-menu-item current-menu-has-children">
                                 <a href="javascript:;">@lang('menu.resource')</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ asset('frontend/assets/OASES_CHAIN_BUSINESS_WHITE_PAPER_V1.pdf') }}" onclick="javascript:window.location.href=this.href;">@lang('menu.whitebook')</a></li>
+                                    <li><a href="@if(config('app.locale') == 'zh'){{ asset('/frontend/assets/OASES_CHAIN_BUSINESS_WHITE_PAPER.pdf') }}@else javascript:; @endif" onclick="javascript:window.location.href=this.href;">@lang('menu.whitebook')</a></li>
                                     <!-- <li><a href="#news">@lang('menu.news')</a></li> -->
                                 </ul>
                             </li>

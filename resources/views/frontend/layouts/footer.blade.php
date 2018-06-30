@@ -30,7 +30,7 @@
                     <ul>
                         <li>
                             <span class="fh-icon fh-4"></span>
-                            <a href="./assets/OASES_CHAIN_BUSINESS_WHITE_PAPER_V1.pdf" download="Oases项目白皮书" target="_blank">@lang('index.book')</a>
+                            <a href="@if(config('app.locale') == 'zh'){{ asset('/frontend/assets/OASES_CHAIN_BUSINESS_WHITE_PAPER.pdf') }}@else javascript:; @endif" download="Oases项目白皮书" target="_blank">@lang('index.book')</a>
                         </li>
                     </ul>
                 </div>

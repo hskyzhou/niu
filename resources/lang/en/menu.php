@@ -9,7 +9,7 @@ return [
 	'environment' => 'Ecology',
 
 	'resource' => 'Resource',
-	'whitebook' => 'Whitebook',
+	'whitebook' => 'White Page',
 	'news' => 'News',
 
 	'join' => 'Join the community',
