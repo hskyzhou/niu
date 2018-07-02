@@ -38,6 +38,13 @@ Route::group(['prefix' => 'admin'], function ($router) {
     /*登录*/
     Auth::routes();
 
+    $router->group(['namespace' => 'Auth'], function($router) {
+        $router->get('/logout', [
+            'uses' => 'LoginController@logout',
+            'as' => 'logout'
+        ]);
+    });
+
     $router->get('/', function () {
         return redirect()->route('admin.news.index');
     });
@@ -51,6 +58,16 @@ Route::group(['prefix' => 'admin'], function ($router) {
                 ]);
             });
             $router->resource('news', 'NewsController');
+            $router->get('/reset', [
+                'uses' => function(){
+                    return view('backend.user.resetpassword');
+                },
+                'as' => 'reset'
+            ]);
+            $router->post('/reset',[
+                'uses' => 'UserController@passwordChange',
+                'as' => 'password'
+            ]);
         });
     });
 });

@@ -25,25 +25,11 @@
                             <img alt="" class="img-circle" src="{{asset('themes/metronic/layouts/layout4/img/avatar9.jpg')}}" />
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
-                            {{-- <li>
-                                <a href="app_todo_2.html">
-                                    <i class="icon-rocket"></i> My Tasks
-                                    <span class="badge badge-success"> 7 </span>
-                                </a>
-                            </li> --}}
-                            {{-- <li class="divider"> </li> --}}
-                            {{-- <li>
-                                <a href="page_user_lock_1.html">
-                                    <i class="icon-lock"></i> Lock Screen 
-                                </a>
-                            </li> --}}
                             <li>
-                                <a href="javascript:;">
+                                <a href="{{route('admin.reset')}}">
                                     <i class="icon-key"></i>修改密码
                                 </a>
-                                <a href=""
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                                <a href="{{route('logout')}}">
                                     <i class="icon-key"></i>退出
                                 </a>
                                 <form id="logout-form" action="" method="POST" style="display: none;">

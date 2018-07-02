@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\News;
+use Auth;
+use App\User;
 use Yajra\DataTables\Html\Builder;
 use Exception;
 
