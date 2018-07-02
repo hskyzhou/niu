@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', config('app.name'))</title>
+    <title>@yield('title', 'OASES PRO')</title>
     <!-- FAVICON -->
     <link rel="apple-touch-icon" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
     <link rel="icon" type="icon/image" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
