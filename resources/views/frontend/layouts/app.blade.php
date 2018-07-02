@@ -15,8 +15,8 @@
     <link href="{{ asset('frontend/assets/css/preloader.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/assets/css/elements.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/assets/css/oases.css?v=2.0') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/assets/css/responsive.css?v=2.0') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/assets/css/oases.css?v=2.1') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/assets/css/responsive.css?v=2.1') }}" rel="stylesheet">
     <script>
         window.Language = '{{ config('app.locale') }}';
         window.Laravel = <?php echo json_encode([

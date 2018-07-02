@@ -7,9 +7,6 @@ body{
 .logo>a>img{
     width: 190px;
 }
-#news>.container, .news-more-warp{
-    display: none;
-}
 /*dropdown-menu*/
 .mainmenu .current-menu-has-children:hover .dropdown-menu,
 .mainmenu ul.dropdown-menu li{

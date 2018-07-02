@@ -47,10 +47,10 @@
                             <span class="fh-icon fh-7"></span>
                             <a href="javascript:;" class="weixin-event">@lang('index.follow_wechat')</a>
                         </li>
-                        <!-- <li>
+                        <li>
                             <span class="fh-icon fh-8"></span>
                             <a href="javascript:;">@lang('index.follow_news')</a>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
             </div>
