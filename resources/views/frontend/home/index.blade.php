@@ -339,7 +339,7 @@
                             <div class="news-box-info">
                                 <p class="news-time">{{ $lastestNew->publish_at}}</p>
                                 <h3>{{ str_limit(strip_tags($lastestNew->title), 44) }}</h3>
-                                <p class="news-detail">{{ str_limit(strip_tags($lastestNew->content), 140) }}</p>
+                                <p class="news-detail">{!! str_limit(strip_tags($lastestNew->content), 140) !!}</p>
                             </div>
                         </a>
                     </div>
