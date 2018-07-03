@@ -17,14 +17,19 @@ class NewsController extends Controller
     		$offset = ($page - 1) * $per;
     		$news = News::limit($per)->offset($offset)->get()->map(function ($item, $key) {
     			return [
-    				'content' => str_limit(strip_tags($item->content), 30),
-    				'title' => $item->title,
+    				'content' => str_limit(strip_tags($item->content), 140),
+    				'title' => str_limit(strip_tags($item->title), 44),
     				'publish_at' => $item->publish_at,
+                    'category' => $item->category,
                     'thumb' => $item->thumb,
     			];
     		});
-    	}
-    	return view('frontend.news.list');
+            return [
+                'data' => $news
+            ];
+    	}else{
+            return view('frontend.news.list');
+        }
     }
 
     public function show($id)

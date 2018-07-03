@@ -78,7 +78,7 @@
                             <div class="col-md-12">
                                 <h4>中文：</h4>
                                 <!-- 编辑器容器 -->
-                                <script id="zh_container" name="zh_content" type="text/plain"><p>这里我可以写一些输入提示</p></script>
+                                <script id="zh_container" name="zh_content" type="text/plain"><p>请输入文章内容</p></script>
                                 <!-- 实例化编辑器 -->
                                 <script type="text/javascript">
                                     var ue = UE.getEditor('zh_container');
@@ -91,7 +91,7 @@
                             <div class="col-md-12 margin-top-10">
                                 <h4>英文：</h4>
                                 <!-- 编辑器容器 -->
-                                <script id="en_container" name="en_content" type="text/plain"><p>这里我可以写一些输入提示</p></script>
+                                <script id="en_container" name="en_content" type="text/plain"><p>请输入文章内容</p></script>
                                 <!-- 实例化编辑器 -->
                                 <script type="text/javascript">
                                     var ue = UE.getEditor('en_container');
@@ -103,7 +103,7 @@
                             <div class="col-md-12 margin-top-10">
                                 <h4>日文：</h4>
                                 <!-- 编辑器容器 -->
-                                <script id="jp_container" name="jp_content" type="text/plain"><p>这里我可以写一些输入提示</p></script>
+                                <script id="jp_container" name="jp_content" type="text/plain"><p>请输入文章内容</p></script>
                                 <!-- 实例化编辑器 -->
                                 <script type="text/javascript">
                                     var ue = UE.getEditor('jp_container');

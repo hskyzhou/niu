@@ -1,5 +1,11 @@
 @extends('frontend.layouts.app')
-
+@section('styles')
+<script>
+    var loadImg = function(e, category){
+        e.src = "{{ url('frontend/assets/img/oases') }}" + "/news"+category+".jpg";
+    }
+</script>
+@endsection
 @section('content')
 <section id="slider-section" class="slider_area  slider-wrapper">
     <div class="container page1-box">
@@ -334,7 +340,7 @@
                     <div class="col-md-4 col-sm-4">
                         <a href="{{ route('news.show', [$lastestNew->id]) }}" class="news-box">
                             <div class="news-box-img">
-                                <img src="{{ asset($lastestNew->thumb) }}" alt="">
+                                <img src="{{ asset($lastestNew->thumb) }}" onerror="loadImg(this,{{ $lastestNew->category }})" alt="">
                             </div>
                             <div class="news-box-info">
                                 <p class="news-time">{{ $lastestNew->publish_at}}</p>

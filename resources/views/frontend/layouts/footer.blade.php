@@ -30,7 +30,7 @@
                     <ul>
                         <li>
                             <span class="fh-icon fh-4"></span>
-                            <a href="./assets/OASES_CHAIN_BUSINESS_WHITE_PAPER_V1.pdf" download="Oases项目白皮书" target="_blank">@lang('index.book')</a>
+                            <a href="@if(config('app.locale') == 'zh'){{ url('/frontend/assets/OASES_CHAIN_BUSINESS_WHITE_PAPER').'_'.config('app.locale').'.pdf' }}@else javascript:; @endif" download="@lang('index.book')" target="_blank">@lang('index.book')</a>
                         </li>
                     </ul>
                 </div>
@@ -91,4 +91,7 @@
         <span class="close">x</span>
         <img src="{{ asset('frontend/assets/img/oases/qrcode.png') }}" alt="">
     </div>
+</div>
+<div class="fixed-weixin">
+    <a href="javascript:;" class="weixin-event"></a>
 </div>

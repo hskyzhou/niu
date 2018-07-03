@@ -41,10 +41,10 @@
                     <button type="submit" class="btn white font-blue btn-block pv-login-btn" style="color: #0eb978 !important">登陆</button>
                 </div>
                 <div class="form-actions">
-                    <div class="pull-left">
+                    <!-- <div class="pull-left">
                         <label class="rememberme check">
                             <input type="checkbox" name="remember" value="1" />记住密码 </label>
-                    </div>
+                    </div> -->
                 </div>
             </form>
         </div>

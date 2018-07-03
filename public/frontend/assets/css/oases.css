@@ -1,4 +1,3 @@
-
 body{
     overflow-x: hidden;
 }
@@ -891,3 +890,64 @@ ul#kareeb_countdown li p {
     color: #000;
     letter-spacing: 2px;
 }
+
+.body_en .icon-box h3{
+    min-height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body_en .work_area-item-cont p{
+    font-size: 13px;
+}
+.body_en .crypcash-area-item .item-cont h2{
+    font-size: 14px;
+}
+.body_jp .crypcash-area-item .item-cont h2{
+    font-size: 16px;
+}
+.fixed-weixin{
+    position: fixed;
+    bottom: 200px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0bbfad;
+    animation: fwiexin 2s ease-out infinite alternate;
+    z-index: 9;
+    padding: 7px;
+}
+.fixed-weixin>.weixin-event{
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: url('../img/oases/ficon-7.png') no-repeat center/contain;
+}
+.fixed-weixin>.weixin-event:after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    content: "";
+    z-index: 10;
+    border-radius: 999px;
+    box-shadow: inset 0 0 15px 10px rgba(71,91,115,.14);
+    animation-name: telegram-pulse;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,.1);
+}
+@keyframes telegram-pulse{
+    0%,80%,84%{-webkit-transform:scale(.6);opacity:0}
+    88%{-webkit-transform:scale(.9);opacity:0}
+    92%{-webkit-transform:scale(1.1);opacity:.6}
+    96%{-webkit-transform:scale(1.35);opacity:.85}
+    100%{-webkit-transform:scale(1.6);opacity:0}
+}
+
+
+

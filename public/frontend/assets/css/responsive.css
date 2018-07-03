@@ -1861,3 +1861,17 @@ p.copy-rights {
         font-size: 14px;
     }
 }
+
+@media (min-width: 768px) and {max-width: 1200px}{
+    .body_en .container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 767px){
+    .body_en .work_area-item-cont p{
+        font-size: 15px;
+    }
+    .body_en .work_area-cont .work_area-item{
+        height: 450px;
+    }
+}
