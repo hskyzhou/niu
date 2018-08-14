@@ -21,7 +21,7 @@ $router->group(['namespace' => "Frontend"], function ($router) {
 });
 
 // backend
-Route::group(['prefix' => 'admin'], function ($router) {
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function ($router) {
     /*登录*/
     Auth::routes();
 
@@ -38,3 +38,7 @@ Route::group(['prefix' => 'admin'], function ($router) {
 
     require(__DIR__ . '/backend/index.php');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
