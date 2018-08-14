@@ -210,3 +210,5 @@ pip-log.txt
 
 # Visual Studio Code
 .vscode/
+
+/public/*.log
