@@ -100,8 +100,9 @@
         <script src="{{asset('/themes/metronic/layouts/layout4/scripts/layout.js')}}"></script>
         <script src="{{asset('/themes/metronic/layouts/layout4/scripts/demo.js')}}"></script>
         <script src="{{asset('/vendor/Validform_v5.3.2/Validform_v5.3.2_min.js') }}"></script>
+        <script src="{{asset('/vendor/datatables/datatables.min.js') }}"></script>
 
-        @yield('scripts')
+        @stack('scripts')
     </body>
 
 </html>

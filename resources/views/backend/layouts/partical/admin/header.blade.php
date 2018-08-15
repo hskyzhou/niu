@@ -26,7 +26,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>
-                                <a href="{{route('admin.reset')}}">
+                                <a href="{{route('admin.user.password.edit')}}">
                                     <i class="icon-key"></i>修改密码
                                 </a>
                                 <a href="{{route('logout')}}">

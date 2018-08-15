@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\User;
 
-class UsersTableSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,8 @@ class UsersTableSeeder extends Seeder
         User::create([
         	'name' => 'admin',
         	'email' => 'admin@admin.com',
-        	'password' => bcrypt('admin'),
+        	'password' => bcrypt('123456'),
+        	'mobile' => '13112345678',
         ]);
     }
 }

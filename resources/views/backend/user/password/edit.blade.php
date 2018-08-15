@@ -14,8 +14,9 @@
         </div>
     </div>
     <div class="portlet-body form">
-        <form action="{{route('admin.password')}}" method="post" class="form-horizontal form-bordered form-row-stripped">
+        <form action="{{route('admin.user.password.update')}}" method="post" class="form-horizontal form-bordered form-row-stripped">
             {{ csrf_field() }}
+            {{method_field('put')}}
             <div class="form-body">
                 <div class="form-group">
                     <label class="control-label col-md-3"><em class="font-red">* </em> 旧密码</label>
@@ -32,7 +33,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-3"><em class="font-red">* </em> 再次确认密码</label>
                     <div class="col-md-9">
-                        <input type="text" name="newpassword_ag"  class="form-control">
+                        <input type="text" name="newpassword_confirmation"  class="form-control">
                     </div>
                 </div>
             </div>

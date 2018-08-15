@@ -8,37 +8,76 @@ use Auth;
 use App\User;
 use Hash;
 use Exception;
+use App\Services\Backend\UserService as Service;
 
 class UserController extends Controller
 {
-    public function __construct()
+    protected $service;
+    public function __construct(Service $service)
     {
-        $this->middleware('auth');
+        $this->service = $service;
     }
 
-    public function passwordChange( Request $request )
+    /**
+     * 列表
+     * @param  Builder $builder [description]
+     * @return [type]           [description]
+     */
+    public function index()
     {
-        $id = Auth::id();
-        $oldpassword = $request->input('oldpassword');
-        $newpassword = $request->input('newpassword');
-        $newpassword_ag = $request->input('newpassword_ag');
-        if($newpassword != $newpassword_ag){
-            return view('backend.user.resetpassword',['error' =>'两次输入的密码不一致！']);
-        }
+        if (request()->ajax()) {
+            return $this->service->datatables();
+        } else {
+            $results = $this->service->index();
 
-        $res = User::where('id',$id)->select('password')->first();
+            return view('backend.user.index')->with($results);
+        }
+    }
 
-        if(!Hash::check($oldpassword, $res->password)){
-            return view('backend.user.resetpassword',['error' =>'原密码错误！']);
-        }
-        $update = array(
-          'password'  =>bcrypt($newpassword),
-        );
-        $result = User::where('id',$id)->update($update);
-        if($result){
-            return view('backend.user.resetpassword',['success' => '修改成功！']);
-        }else{
-            return view('backend.user.resetpassword',['error' =>'密码修改错误，请稍后重试！']);
-        }
+    public function create()
+    {
+        return view('backend.user.create');
+    }
+
+    public function store()
+    {
+        return response()->json($this->service->store());
+    }
+
+    public function edit($id)
+    {
+        $results = $this->service->edit($id);
+
+        return view('backend.user.edit')->with($results);
+    }
+
+    public function update($id)
+    {
+        return response()->json($this->service->update($id));
+    }
+
+    public function destroy($id)
+    {
+        return response()->json($this->service->destroy($id));
+    }
+
+    /**
+     * 修改密码
+     * @param  Request $request [description]
+     * @return [type]           [description]
+     */
+    public function passwordEdit()
+    {
+        return view('backend.user.password.edit');
+    }
+
+    public function passwordUpdate()
+    {
+        return response()->json($this->service->passwordUpdate());
+    }
+
+    public function passwordReset($userId)
+    {
+        return response()->json($this->service->passwordReset());
     }
 }
