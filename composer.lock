@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d57b2f8c26194c9ae62083ab99d71ab",
+    "content-hash": "1603aa2b0f4b62439e958f853f08d61c",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -433,6 +433,50 @@
                 "trusted proxy"
             ],
             "time": "2018-02-07T20:20:57+00:00"
+        },
+        {
+            "name": "hskyzhou/generator",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hskyzhou/generator.git",
+                "reference": "dccb6b8b79fb869d8838e51b3475c56026753302"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hskyzhou/generator/zipball/dccb6b8b79fb869d8838e51b3475c56026753302",
+                "reference": "dccb6b8b79fb869d8838e51b3475c56026753302",
+                "shasum": ""
+            },
+            "require": {
+                "kkszymanowski/traitor": "^0.2.0",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "HskyZhou\\Generator\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HskyZhou\\Generator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "hskyzhou",
+                    "email": "xezw211@126.com"
+                }
+            ],
+            "description": "可以生成service的生成器",
+            "time": "2018-08-16T02:52:10+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
