@@ -43,7 +43,7 @@
         $('.pv-save-user-event').click(function(){
             var that = $(this);
             var form = that.parents('form');
-            var vf = PVJs.validForm(form);
+            var vf = sJs.validForm(form);
             if(vf.check()){
                 form.submit();
             }

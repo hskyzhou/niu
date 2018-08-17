@@ -134,7 +134,7 @@
 <script src="{{ asset('vendor/bootstrap-fileinput/bootstrap-fileinput.js')}}" type="text/javascript"></script>
 <script>
     $(function(){
-        PVJs.rendre.laydate();
+        sJs.rendre.laydate();
     })
 </script>
 @endsection

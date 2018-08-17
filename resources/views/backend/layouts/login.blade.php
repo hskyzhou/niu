@@ -11,7 +11,7 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
-        <title>{{ config('app.name', 'OASES') }}</title>
+        <title>{{ config('app.name', '公司名称') }}</title>
         <link rel="apple-touch-icon" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
         <link rel="icon" type="icon/image" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
         <!-- CSRF Token -->
@@ -45,7 +45,7 @@
         <div class="content">
             @yield('content')
         </div>
-        <div class="copyright hide"> Copyright &copy; Cryption2018.All rights OASES</div>
+        <div class="copyright hide"> Copyright &copy; Cryption2018.All rights Company</div>
         <!-- END LOGIN -->
         <!--[if lt IE 9]>
         <script src="{{ asset('/vendor/respond.min.js') }}"></script>

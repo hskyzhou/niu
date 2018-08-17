@@ -171,7 +171,7 @@
             var word = word || "";
             if(word.length <=0) return false;
 
-            PVJs.ajax({
+            sJs.ajax({
                 url: config.pinyinURL + '?word=' + word,
                 type: 'get',
                 success: function(resp){
@@ -358,7 +358,7 @@
          * @return {[type]}      [description]
          */
         validForm: function(form, opts) {
-            if (!PVJs.checkPlugin($.fn.Validform)) return false;
+            if (!sJs.checkPlugin($.fn.Validform)) return false;
             var default_opt = {
                 tiptype: function(msg, o, cssctl) {
                     var q_el = o.obj,
@@ -514,7 +514,7 @@
              * @return {[type]}    [description]
              */
             tabTableEvent: function(el) {
-                var bt = PVJs.bt();
+                var bt = sJs.bt();
                 if (el == undefined || el.length <= 0) return false;
                 /**
                  * 事件触发
@@ -540,7 +540,7 @@
                     }
                     if (!bt) return false;
 
-                    data.uuid = PVJs.uuid(10);
+                    data.uuid = sJs.uuid(10);
                     var buff = bt(tr_tpl, data || {});
                     if(riTable.is(':hidden')){
                         var alias = riTable.attr('data-alias');
@@ -548,7 +548,7 @@
                     }else{
                         var buff_el = $(buff).appendTo(riTable.find('tbody'));
                     }
-                    PVJs.tooltip(buff_el);
+                    sJs.tooltip(buff_el);
                 }
                 /**
                  * 更新Tr
@@ -655,14 +655,14 @@
                         tr_tpl = that.attr('data-tr-tpl') || "",
                         tr = that.parents('tr[data-uuid]');
                     new_tr = tr.clone();
-                    new_tr.attr("data-uuid", PVJs.uuid(10));
+                    new_tr.attr("data-uuid", sJs.uuid(10));
 
                     that.tooltip('hide');
                     tr.after(new_tr);
                     //针对-用药情况
                     triggerFn(tr_tpl);
 
-                    PVJs.tooltip(new_tr);
+                    sJs.tooltip(new_tr);
                 };
                 //上移
                 var moveUpEvent = function() {
@@ -679,7 +679,7 @@
                     }
                     tr.prev().before(new_tr);
                     tr.remove();
-                    PVJs.tooltip(new_tr);
+                    sJs.tooltip(new_tr);
                 };
                 //下移
                 var moveDownEvent = function() {
@@ -697,7 +697,7 @@
                     }
                     tr.next().after(new_tr);
                     tr.remove();
-                    PVJs.tooltip(new_tr);
+                    sJs.tooltip(new_tr);
                 };
 
                 el.each(function() {
@@ -840,7 +840,7 @@
             }
         },
         select2:function(el){
-            PVJs.rendre.select2(el.parent());
+            sJs.rendre.select2(el.parent());
         },
         /**
          * 页面dom常用渲染库
@@ -1018,8 +1018,8 @@
             var flag = 'dictData'; //cache key
 
             $.each(arrParams, function(index, item){
-                if(typeof PVJs.caches[flag][item] !== "undefined"){
-                    cacheData[item] = PVJs.caches[flag][item];
+                if(typeof sJs.caches[flag][item] !== "undefined"){
+                    cacheData[item] = sJs.caches[flag][item];
                 }else{
                     noCacheParams.push(item);
                 }
@@ -1062,7 +1062,7 @@
                             }
                         }
                         self.html(buff);
-                        self.attr('dict-key', PVJs.uuid(4));
+                        self.attr('dict-key', sJs.uuid(4));
                         if(callback){
                             var arr_callback = callback.split('.');
                             window[arr_callback[0]][arr_callback[1]](self, arguments);
@@ -1083,7 +1083,7 @@
                 success: function(resp) {
                     if (resp.result) {
                         renderSelectFn(resp.data);
-                        PVJs.setCache(resp.data,'dictData');
+                        sJs.setCache(resp.data,'dictData');
                     }
                 }
             })
@@ -1095,7 +1095,7 @@
          * @return {[type]}      [description]
          */
         setCache: function(data,key){
-            var cache = PVJs.caches;
+            var cache = sJs.caches;
             if(key){
                 cache = cache[key];
             }
@@ -1261,17 +1261,17 @@
                     "check_callback": true,
                     'data': function(obj, callback) {
                         var d = [];
-                        if (typeof key !== "undefined" && PVJs.caches.jsTreeData[key] instanceof Array && PVJs.caches.jsTreeData[key].length > 0) {
-                            d = PVJs.caches.jsTreeData[key];
+                        if (typeof key !== "undefined" && sJs.caches.jsTreeData[key] instanceof Array && sJs.caches.jsTreeData[key].length > 0) {
+                            d = sJs.caches.jsTreeData[key];
                         } else {
-                            PVJs.ajax({
+                            sJs.ajax({
                                 url: url,
                                 type: 'GET',
                                 async: false,
                                 success: function(resp) {
                                     if (resp.result) {
                                         d = changeData(resp.data);
-                                        PVJs.caches.jsTreeData = d;
+                                        sJs.caches.jsTreeData = d;
                                     }
                                 }
                             });
@@ -1343,7 +1343,7 @@
                 },
                 bStateSave: true,
                 drawCallback: function() {
-                    PVJs.tableInit.apply(this, arguments);
+                    sJs.tableInit.apply(this, arguments);
                 }
             }
             var options = $.extend({}, cfg, opts, true);
@@ -1545,13 +1545,13 @@
         }
     };
 
-    win.PVJs = pv;
+    win.sJs = pv;
     
 
     $(function(){
         // validform 验证规则
         if($.fn.Validform){
-            var v = PVJs.valid;
+            var v = sJs.valid;
             for(var i in v){
                $.Datatype[i] = v[i]; 
             }

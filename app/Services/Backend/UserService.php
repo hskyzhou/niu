@@ -39,10 +39,10 @@ class UserService extends Service
 		])->ajax([
 			'url' => route('admin.user.index'),
 		    'type' => 'GET',
-       	]);
+       	])->parameters(config('admin.datatables-cfg.basic'));
 
 		return compact('html');
-	}	
+	}
 
 	public function datatables()
 	{

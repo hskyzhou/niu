@@ -42,7 +42,7 @@
                     layer.confirm("确定执行删除操作？", {
                         btn: ['确定','取消']
                     }, function(){
-                        PVJs.ajax({
+                        sJs.ajax({
                             url: that.attr('data-url'),
                             type: type,
                             success: function(resp){
@@ -54,7 +54,7 @@
                         })
                     })
                 }else if(type == "get"){
-                    PVJs.ajax({
+                    sJs.ajax({
                         url: that.attr('data-url'),
                         type: 'get',
                         success: function(resp){
