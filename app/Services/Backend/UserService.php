@@ -68,7 +68,7 @@ class UserService extends Service
 			}
 
 			/*设置密码*/
-			$this->setPassword($user, request('password'));
+			$this->setPassword($user, request('password', '123456'));
 		});
 
 		return array_merge($this->results, [
@@ -154,7 +154,7 @@ class UserService extends Service
 	 */
 	public function passwordReset($id)
 	{
-		$exception = DB::transaction(function() {
+		$exception = DB::transaction(function() use ($id) {
 			$user = $this->userRepo->find($id);
 			/*设置密码*/
 			$this->setPassword($user, request('password', '123456'));

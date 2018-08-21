@@ -32,7 +32,9 @@
             "App\\": "app/"
         },
         "files" : [
-            "app/helpers/common.php"
+            "app/helpers/common.php",
+            "app/helpers/cache.php",
+            "app/helpers/global.php"
         ]
     },
     "autoload-dev": {

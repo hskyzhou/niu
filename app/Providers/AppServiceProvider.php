@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /*sidebar 菜单*/
+        View::composer('backend.layouts.partical.admin.sidebar', \App\Http\ViewComposers\SidebarMenuComposer::class);
     }
 
     /**

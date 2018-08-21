@@ -9,9 +9,14 @@ use App\User;
 use Hash;
 use Exception;
 use App\Services\Backend\UserService as Service;
+use App\Traits\ControllerTrait;
 
 class UserController extends Controller
 {
+    use ControllerTrait;
+
+    protected $routePrefix = 'admin.user';
+    
     protected $service;
     public function __construct(Service $service)
     {

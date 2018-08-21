@@ -18,6 +18,18 @@ if ( !function_exists('getUser') ) {
 }
 
 /**
+ * 获取当前登录用户id
+ */
+if ( !function_exists('getUserId') ) {
+	function getUserId()
+	{
+		$user = getUser();
+
+		return $user->id;
+	}
+}
+
+/**
  * 验证用户登录密码是否正确
  */
 if ( !function_exists('checkUserPasswordByWeb') ) {

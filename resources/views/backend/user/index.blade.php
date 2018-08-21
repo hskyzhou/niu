@@ -4,10 +4,19 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-layers font-green"></i>
-                <span class="caption-subject font-green sbold uppercase">学生管理</span>
+                <span class="caption-subject font-green sbold uppercase">用户管理</span>
             </div>
         </div>
         <div class="portlet-body">
+            <div class="table-toolbar">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="btn-group">
+                            <a href="{{ route('admin.user.create') }}" class="btn sbold green"><i class="fa fa-plus"></i>添加用户</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
             {!! $html->table(['class' => 'table table-bordered'], true) !!}
         </div>
     </div>
