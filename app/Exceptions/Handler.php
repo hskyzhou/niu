@@ -54,7 +54,7 @@ class Handler extends ExceptionHandler
         $results = [];
 
         /*验证规则*/
-        if( $exception instanceof ValidationException ) {
+        if( $exception instanceof \Illuminate\Validation\ValidationException ) {
             $message = '系统出错';
             if( $errors = $exception->errors() ) {
                 foreach( $errors as $error ) {
