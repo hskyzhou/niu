@@ -78,7 +78,12 @@ class UserController extends Controller
 
     public function passwordUpdate()
     {
-        return response()->json($this->service->passwordUpdate());
+        $results = $this->service->passwordUpdate();
+        if ($results['result']) {
+            return redirect('admin/user');
+        } else {
+            return back()->withInput()->withErrors($results['message']);
+        }
     }
 
     public function passwordReset($userId)

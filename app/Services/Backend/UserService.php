@@ -119,13 +119,19 @@ class UserService extends Service
 				/*设置密码*/
 				$this->setPassword($user, request('newpassword'));
 			} else {
-				throw new Exception("旧密码错误", 2);
+				return [
+					'result' => false,
+					'message' => '旧密码错误'
+				];				
 			}
+
+			return [
+				'result' => true,
+				'message' => '修改密码成功'
+			];
 		});
 
-		return array_merge($this->results, [
-			'message' => '修改密码成功',
-		]);
+		return $exception;
 	}
 
 	/**

@@ -14,26 +14,36 @@
         </div>
     </div>
     <div class="portlet-body form">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{route('admin.user.password.update')}}" method="post" class="form-horizontal form-bordered form-row-stripped">
+
             {{ csrf_field() }}
             {{method_field('put')}}
             <div class="form-body">
                 <div class="form-group">
                     <label class="control-label col-md-3"><em class="font-red">* </em> 旧密码</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" name="oldpassword">
+                        <input type="password" class="form-control" name="oldpassword">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-md-3"><em class="font-red">* </em>新密码</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" name="newpassword">
+                        <input type="password" class="form-control" name="newpassword">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-md-3"><em class="font-red">* </em> 再次确认密码</label>
                     <div class="col-md-9">
-                        <input type="text" name="newpassword_confirmation"  class="form-control">
+                        <input type="password" name="newpassword_confirmation"  class="form-control">
                     </div>
                 </div>
             </div>
