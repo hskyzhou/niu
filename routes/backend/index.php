@@ -7,4 +7,7 @@ $router->group(['middleware' => ['auth'], 'namespace' => 'Backend'], function ($
 
 	/*菜单*/
 	require(__DIR__ . '/menu.php');
+
+	/*微信用户*/
+	require(__DIR__ . '/wechat.php');
 });

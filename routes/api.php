@@ -13,6 +13,28 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+$router->group(['namespace' => 'Api'], function ($router) {
+	$router->group(['prefix' => 'wechat', 'as' => 'wechat.'], function ($router) {
+		/*提交微信数据*/
+		$router->post('/', [
+			'uses' => 'WechatController@store',
+			'as' => 'store',
+		]);
+	});
+
+	$router->group(['prefix' => 'pageview', 'as' => 'pageview.'], function ($router) {
+		/*提交页面时长数据*/
+		$router->post('/', [
+			'uses' => 'PageViewController@store',
+			'as' => 'store',
+		]);
+	});
+
+	$router->group(['prefix' => 'cardview', 'as' => 'cardview.'], function ($router) {
+		/*提交卡片数据*/
+		$router->post('/', [
+			'uses' => 'CardViewController@store',
+			'as' => 'store',
+		]);
+	});
 });
