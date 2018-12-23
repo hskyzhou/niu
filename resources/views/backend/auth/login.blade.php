@@ -12,6 +12,15 @@
    
     <div class="content-wrap">
         <div class="form-box">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form class="login-form" method="POST" action="{{route('login')}}">
                 {{ csrf_field() }}
                 {{-- @include(getThemeTemplate('backend.layouts.partical.admin.error')) --}}
