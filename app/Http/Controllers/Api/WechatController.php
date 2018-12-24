@@ -21,6 +21,6 @@ class WechatController extends Controller
 
     public function login()
     {
-    	return response()->json($this->service->());
+    	return response()->json($this->service->login());
     }
 }
