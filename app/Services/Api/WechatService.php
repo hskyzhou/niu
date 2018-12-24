@@ -23,6 +23,8 @@ class WechatService extends Service
 	];
 	public function store()
 	{
+		$this->checkWecahtLogin(request('openid'), request('token'));
+		
 		request()->validate([
             'avatar' => 'required',
             'name' => 'required',
