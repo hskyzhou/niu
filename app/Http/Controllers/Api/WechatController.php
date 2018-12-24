@@ -21,11 +21,6 @@ class WechatController extends Controller
 
     public function login()
     {
-    	$code = request('code', '');
-    	$app = app('wechat.mini_program');
-
-    	$wechat = $app->auth->session($code);
-
-    	dd($wechat);
+    	return response()->json($this->service->());
     }
 }

@@ -42,4 +42,17 @@ class WechatService extends Service
 			'message' => '提交成功'
 		]);
 	}
+
+	public function login()
+	{
+		$code = request('code', '');
+    	$app = app('wechat.mini_program');
+
+    	$wechat = $app->auth->session($code);
+
+    	return array_merge($this->results, [
+    		'message' => '获取成功',
+    		'data' => $wechat
+    	]);
+	}
 }
