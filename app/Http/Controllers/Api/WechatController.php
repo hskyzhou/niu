@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Services\Api\WechatService as Service;
+use EasyWeChat;
 
 class WechatController extends Controller
 {
@@ -22,7 +23,7 @@ class WechatController extends Controller
     public function login()
     {
     	$code = request('code', '');
-    	$app = app('wechat.mini_program');
+    	$app = EasyWeChat::miniProgram(); // 小程序
 
     	$wechat = $app->auth->session($code);
 
