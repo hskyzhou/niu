@@ -21,7 +21,7 @@ class Wechat extends Model implements Transformable
      * @var array
      */
     protected $fillable = [
-    	'avatar', 'openid', 'name'
+    	'avatar', 'openid', 'name', 'session_key'
     ];
 
 }
