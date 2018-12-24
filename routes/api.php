@@ -21,7 +21,7 @@ $router->group(['namespace' => 'Api'], function ($router) {
 			'as' => 'store',
 		]);
 
-		$router->post('login', [
+		$router->get('login', [
 			'uses' => 'WechatController@login',
 			'as' => 'login',
 		]);
