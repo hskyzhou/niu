@@ -20,6 +20,11 @@ $router->group(['namespace' => 'Api'], function ($router) {
 			'uses' => 'WechatController@store',
 			'as' => 'store',
 		]);
+
+		$router->post('login', [
+			'uses' => 'WechatController@login',
+			'as' => 'login',
+		]);
 	});
 
 	$router->group(['prefix' => 'pageview', 'as' => 'pageview.'], function ($router) {
