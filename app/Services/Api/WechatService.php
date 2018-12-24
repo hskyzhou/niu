@@ -50,6 +50,20 @@ class WechatService extends Service
 
     	$wechat = $app->auth->session($code);
 
+    	if (isset($wechat['errcode'])) {
+    		/*登录失败*/
+    		throw new Exception("登录失败", 2);
+    	}
+
+    	/*记录用户*/
+    	$attributes = [
+    		'openid' => $wechat['openid'],
+    	];
+    	$values = [
+    		'session_key' => $wechat['session_key'],
+    	];
+    	$this->wechatRepo->updateOrCreate($attributes, $values);
+
     	return array_merge($this->results, [
     		'message' => '获取成功',
     		'data' => $wechat
