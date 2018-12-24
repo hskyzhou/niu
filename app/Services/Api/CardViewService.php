@@ -7,7 +7,7 @@ use Exception;
 use DB;
 use App\Traits\ResultTrait;
 use App\Traits\ServiceTrait;
-
+use App\Services\Api\WechatTrait;
 /**
  * Class WechatService.
  *
@@ -15,7 +15,7 @@ use App\Traits\ServiceTrait;
  */
 class CardViewService extends Service
 {
-	use ServiceTrait, ResultTrait;
+	use ServiceTrait, ResultTrait, WechatTrait;
 
 	protected $storeFields = [
 		'openid', 'identify'
