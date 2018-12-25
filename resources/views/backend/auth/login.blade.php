@@ -2,9 +2,9 @@
 
 @section('content')
     <!-- BEGIN LOGO -->
-    <div class="logo" style="margin-bottom: 40px;">
+    <div class="logo" style="margin-bottom: 10px;">
         <a href="index.html">
-            <img src="{{ asset('/backend/images/logo3.png') }}" style="height: 60px;" alt="" />
+            <img src="{{ asset('/backend/images/logo3.png') }}" style="height: 100px;" alt="" />
         </a>
     </div>
     <!-- END LOGO -->
