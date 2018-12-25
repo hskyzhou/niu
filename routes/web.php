@@ -11,13 +11,17 @@
 |
 */
 //frontend
-$router->group(['namespace' => "Frontend"], function ($router) {
-    $router->get('/', [
-        'uses' => 'HomeController@index',
-        'as' => 'home'
-    ]);
+// $router->group(['namespace' => "Frontend"], function ($router) {
+//     $router->get('/', [
+//         'uses' => 'HomeController@index',
+//         'as' => 'home'
+//     ]);
 
-    require(__DIR__ . '/frontend/index.php');
+//     require(__DIR__ . '/frontend/index.php');
+// });
+// 
+$router->get('/', function () {
+    return redirect()->route('admin.user.index');
 });
 
 // backend
