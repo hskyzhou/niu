@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'OASES PRO')</title>
+    <title>@yield('title', '安利纽崔莱上市预热小程序数据后台')</title>
     <!-- FAVICON -->
     <link rel="apple-touch-icon" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
     <link rel="icon" type="icon/image" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">

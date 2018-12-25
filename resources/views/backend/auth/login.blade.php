@@ -4,7 +4,7 @@
     <!-- BEGIN LOGO -->
     <div class="logo" style="margin-bottom: 40px;">
         <a href="index.html">
-            <img src="{{ asset('/frontend/assets/img/oases/logo.png') }}" style="height: 60px;" alt="" />
+            <img src="{{ asset('/backend/images/logo3.png') }}" style="height: 60px;" alt="" />
         </a>
     </div>
     <!-- END LOGO -->
