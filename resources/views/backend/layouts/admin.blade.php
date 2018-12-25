@@ -7,14 +7,14 @@
     <!-- BEGIN HEAD -->
     <head>
         <meta charset="utf-8" />
-        <title>OASES 后台系统</title>
+        <title>安利纽崔莱上市预热小程序数据后台</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
         <meta name="_token" content="{{ csrf_token() }}">
-        <link rel="apple-touch-icon" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
-        <link rel="icon" type="icon/image" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('backend/images/logo.png') }}">
+        <link rel="icon" type="icon/image" href="{{ asset('backend/images/logo.png') }}">
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="{{ asset('/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('/vendor/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />

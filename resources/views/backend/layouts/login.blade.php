@@ -11,9 +11,9 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
-        <title>{{ config('app.name', '公司名称') }}</title>
-        <link rel="apple-touch-icon" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
-        <link rel="icon" type="icon/image" href="{{ asset('frontend/assets/img/oases/favicon.png') }}">
+        <title>{{ config('app.name', '安利纽崔莱') }}</title>
+        <link rel="apple-touch-icon" href="{{ asset('backend/images/logo.png') }}">
+        <link rel="icon" type="icon/image" href="{{ asset('backend/images/logo.png') }}">
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
