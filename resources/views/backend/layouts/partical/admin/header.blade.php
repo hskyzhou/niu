@@ -3,7 +3,7 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo text-center">
-            <img src="{{ asset('/frontend/assets/img/oases/backend-logo.png') }}" style="height: 50px;    margin-top: 10px;" alt="">
+            <img src="{{ asset('/backend/images/logo3.png') }}" style="height: 50px;    margin-top: 10px;" alt="">
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
             </div>
@@ -20,7 +20,7 @@
                     <!-- BEGIN USER LOGIN DROPDOWN -->
                     <li class="dropdown dropdown-user dropdown-light">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <span class="username username-hide-on-mobile"> OASES </span>
+                            <span class="username username-hide-on-mobile"> Admin </span>
                             <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
                             <img alt="" class="img-circle" src="{{asset('themes/metronic/layouts/layout4/img/avatar9.jpg')}}" />
                         </a>
