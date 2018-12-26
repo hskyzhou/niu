@@ -16,17 +16,17 @@
         <link rel="apple-touch-icon" href="{{ asset('backend/images/logo.png') }}">
         <link rel="icon" type="icon/image" href="{{ asset('backend/images/logo.png') }}">
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="{{ asset('/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/vendor/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/vendor/datatables/plugins/bootstrap/datatables.bootstrap.css')}}" rel="stylesheet" type="text/css" >
-        <link href="{{ asset('/vendor/uniform/css/uniform.default.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/vendor/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css')}}" rel="stylesheet" type="text/css" >
+        <link href="{{ asset('/plugins/uniform/css/uniform.default.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="{{ asset('/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/vendor/datatables/datatables.min.css')}}" rel="stylesheet" type="text/css" >
-        <link href="{{ asset('/vendor/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('/vendor/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/plugins/datatables/datatables.min.css')}}" rel="stylesheet" type="text/css" >
+        <link href="{{ asset('/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('/plugins/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="{{ asset('/themes/metronic/global/css/components-md.min.css')}}" rel="stylesheet" id="style_components" type="text/css" />
@@ -36,8 +36,8 @@
         <link href="{{ asset('/themes/metronic/layouts/layout4/css/layout.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('/themes/metronic/layouts/layout4/css/themes/light.min.css')}}" rel="stylesheet" type="text/css" id="style_color" />
         <link href="{{ asset('/themes/metronic/layouts/layout4/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/vendor/layer/theme/default/layer.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/vendor/laydate/theme/default/laydate.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/plugins/layer/theme/default/layer.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('/plugins/laydate/theme/default/laydate.css')}}" rel="stylesheet" type="text/css" />
         @yield('styles')
         <link href="{{ asset('backend/css/common.css') }}" rel="stylesheet" type="text/css">
         <style>
@@ -68,29 +68,29 @@
         @include('backend.layouts.partical.admin.modal')
         <!-- END MODAL -->
         <!--[if lt IE 9]>
-        <script src="{{ asset('/vendor/respond.min.js') }}"></script>
-        <script src="{{ asset('/vendor/excanvas.min.js') }}"></script>
+        <script src="{{ asset('/plugins/respond.min.js') }}"></script>
+        <script src="{{ asset('/plugins/excanvas.min.js') }}"></script>
         <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
-        <script src="{{asset('/vendor/jquery.min.js')}}"></script>
-        <script src="{{asset('/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('/vendor/js.cookie.min.js')}}"></script>
-        <script src="{{asset('/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}"></script>
-        <script src="{{asset('/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
-        <script src="{{asset('/vendor/jquery.blockui.min.js')}}"></script>
-        <script src="{{asset('/vendor/uniform/jquery.uniform.min.js')}}"></script>
-        <script src="{{asset('/vendor/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
+        <script src="{{asset('/plugins/jquery.min.js')}}"></script>
+        <script src="{{asset('/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('/plugins/js.cookie.min.js')}}"></script>
+        <script src="{{asset('/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}"></script>
+        <script src="{{asset('/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+        <script src="{{asset('/plugins/jquery.blockui.min.js')}}"></script>
+        <script src="{{asset('/plugins/uniform/jquery.uniform.min.js')}}"></script>
+        <script src="{{asset('/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="{{ asset('/vendor/webuploader-0.1.5/webuploader.nolog.min.js') }}"></script>
-        <script src="{{asset('/vendor/layer/layer.js')}}"></script>
-        <script src="{{asset('/vendor/laydate/laydate.js')}}"></script>
-        <script src="{{ asset('/vendor/baiduTemplate.js') }}"></script>
-        <script src="{{ asset('/vendor/select2/js/select2.full.min.js') }}"></script>
+        <script src="{{ asset('/plugins/webuploader-0.1.5/webuploader.nolog.min.js') }}"></script>
+        <script src="{{asset('/plugins/layer/layer.js')}}"></script>
+        <script src="{{asset('/plugins/laydate/laydate.js')}}"></script>
+        <script src="{{ asset('/plugins/baiduTemplate.js') }}"></script>
+        <script src="{{ asset('/plugins/select2/js/select2.full.min.js') }}"></script>
 
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
-        <script src="{{asset('/vendor/moment-with-locales.js')}}"></script>
+        <script src="{{asset('/plugins/moment-with-locales.js')}}"></script>
         <script src="{{asset('/themes/metronic/global/scripts/app.js')}}"></script>
         <script src="{{asset('/backend/js/common.js')}}"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
@@ -99,7 +99,7 @@
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="{{asset('/themes/metronic/layouts/layout4/scripts/layout.js')}}"></script>
         <script src="{{asset('/themes/metronic/layouts/layout4/scripts/demo.js')}}"></script>
-        <script src="{{asset('/vendor/Validform_v5.3.2/Validform_v5.3.2_min.js') }}"></script>
+        <script src="{{asset('/plugins/Validform_v5.3.2/Validform_v5.3.2_min.js') }}"></script>
         @stack('scripts')
         <script>
             $(function(){

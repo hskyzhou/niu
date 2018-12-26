@@ -1,7 +1,7 @@
 @extends('backend.layouts.admin')
 
 @section('styles')
-<link href="{{ asset('/vendor/jquery-nestable/jquery.nestable.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/plugins/jquery-nestable/jquery.nestable.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('content')
@@ -34,7 +34,7 @@
 @endsection
 
 @push('js')
-	<script src="{{ asset('/vendor/jquery-nestable/jquery.nestable.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('/plugins/jquery-nestable/jquery.nestable.js') }}" type="text/javascript"></script>
 
 	<script>
 		
