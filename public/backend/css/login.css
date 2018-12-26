@@ -1,0 +1,62 @@
+html,body{height: 100%;}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login .content{margin: 0 auto;}
+.login a{display: inline-block;}
+.login .logo{padding: 0;}
+.logo .logo-title{margin: 15px 0 25px; text-align: center;color: #FFF;font-size: 24px;font-weight: 400;letter-spacing: 2px;}
+.login{
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, #337ab7), color-stop(100%, #2ab4c0));
+    background-image: -webkit-linear-gradient(135deg, #337ab7, #2ab4c0);
+    background-image: -moz-linear-gradient(45deg, #337ab7, #2ab4c0);
+    background-image: -ms-linear-gradient(45deg, #337ab7 0, #2ab4c0 100%);
+    background-image: -o-linear-gradient(45deg, #337ab7, #2ab4c0);
+    background-image: linear-gradient(135deg, #337ab7, #2ab4c0);
+}
+.login .content-wrap {
+  width: 300px;
+  margin: 0 auto;
+}
+.login .content .form-box{
+    background-color: rgba(255,255,255,0.2);
+    padding: 27px;
+    border-radius: 10px;
+}
+.login .pv-login-btn{letter-spacing: 10px;font-size: 16px;font-weight: 400;}
+.login .content .form-control:focus, 
+.login .content .form-control:active,
+.login .content .form-control{background-color: rgba(255,255,255,.3);border-color: transparent;color: #FFF;}
+
+.login .content .forget-password{font-size: 14px;}
+
+
+ input:-moz-placeholder,
+textarea:-moz-placeholder { 
+    color: #FFF !important;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { 
+    color: #FFF !important;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder { 
+    color: #FFF !important;
+}
+::-webkit-input-placeholder { 
+    color: #FFF !important;
+}
+:-moz-placeholder { 
+    color: #FFF !important;
+}
+::-moz-placeholder { 
+    color: #FFF !important;
+}
+:-ms-input-placeholder { 
+    color: #FFF !important;
+}
+
+
+
