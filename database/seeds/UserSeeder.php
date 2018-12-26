@@ -17,6 +17,7 @@ class UserSeeder extends Seeder
     {
         Menu::insert([
             ['name'=>'管理员管理', 'route'=>'admin.user.index', 'permission'=>'admin.user.index'],
+            ['name'=>'微信管理', 'route'=>'admin.wechat.index', 'permission'=>'admin.wechat.index'],
         ]);
         
         $role = Role::create([
@@ -27,6 +28,7 @@ class UserSeeder extends Seeder
 
         $permissions = [
             ['name' => 'admin.user.index', 'display_name' => '用户管理'],
+            ['name' => 'admin.wechat.index', 'display_name' => '微信管理'],
         ];
 
         foreach ($permissions as $permission) {
