@@ -27,6 +27,8 @@ $router->group(['namespace' => 'Api'], function ($router) {
 		]);
 	});
 
+    $router->post('filter-word', 'FilterWordController@check');
+
 	$router->group(['prefix' => 'pageview', 'as' => 'pageview.'], function ($router) {
 		/*提交页面时长数据*/
 		$router->post('/', [
