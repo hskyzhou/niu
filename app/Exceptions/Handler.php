@@ -48,6 +48,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+
         if (env('APP_DEBUG')) {
             // dd($exception);
         }
@@ -55,6 +56,7 @@ class Handler extends ExceptionHandler
 
         /*验证规则*/
         if( $exception instanceof \Illuminate\Validation\ValidationException ) {
+
             $message = '系统出错';
             if( $errors = $exception->errors() ) {
                 foreach( $errors as $error ) {
@@ -70,6 +72,7 @@ class Handler extends ExceptionHandler
         }
 
         if ($exception instanceof \Prettus\Validator\Exceptions\ValidatorException) {
+
             $message = '验证出错';
             if( $errors = $exception->getMessageBag()->all() ) {
                 foreach( $errors as $error ) {
@@ -86,15 +89,20 @@ class Handler extends ExceptionHandler
 
         /*查不到数据*/
         if ($exception instanceof \Illuminate\Database\Eloquent\ModelNotFoundException) {
+
             $results = array_merge($this->results, [
                 'code' => '0',
                 'message' => '查无数据',
             ]);
         }
 
+        if($exception instanceof \Symfony\Component\Debug\Exception\FatalErrorException ) {
+            return response()->view('errors.500', [], 500);
+        }
+
         if( !$results ) {
             /*处理通用异常*/
-            $results = array_merge($this->results, [
+            $results = array_merge($his->results, [
                 'code' => '0',
                 'message' => $exception->getMessage(),
             ]);
@@ -103,6 +111,8 @@ class Handler extends ExceptionHandler
         if( request()->format() == 'json' ) {
             return response()->json($results);
         }
+
+        
 
         return parent::render($request, $exception);
     }
