@@ -96,10 +96,6 @@ class Handler extends ExceptionHandler
             ]);
         }
 
-        if($exception instanceof \Symfony\Component\Debug\Exception\FatalErrorException ) {
-            return response()->view('errors.500', [], 500);
-        }
-
         if( !$results ) {
             /*处理通用异常*/
             $results = array_merge($his->results, [
@@ -111,8 +107,6 @@ class Handler extends ExceptionHandler
         if( request()->format() == 'json' ) {
             return response()->json($results);
         }
-
-        
 
         return parent::render($request, $exception);
     }
