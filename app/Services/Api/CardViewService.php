@@ -7,7 +7,7 @@ use Exception;
 use DB;
 use App\Traits\ResultTrait;
 use App\Traits\ServiceTrait;
-use App\Services\Api\WechatTrait;
+use App\Traits\Api\WechatTrait;
 /**
  * Class WechatService.
  *
