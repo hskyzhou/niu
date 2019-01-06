@@ -48,7 +48,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-
         if (env('APP_DEBUG')) {
             // dd($exception);
         }
@@ -98,7 +97,7 @@ class Handler extends ExceptionHandler
 
         if( !$results ) {
             /*处理通用异常*/
-            $results = array_merge($his->results, [
+            $results = array_merge($this->results, [
                 'code' => '0',
                 'message' => $exception->getMessage(),
             ]);
