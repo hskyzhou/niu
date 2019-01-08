@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-// $router->group(['namespace' => 'Api'], function ($router) {
+$router->group(['namespace' => 'Api'], function ($router) {
 // 	$router->group(['prefix' => 'wechat', 'as' => 'wechat.'], function ($router) {
 // 		/*提交微信数据*/
 // 		$router->post('/', [
@@ -27,7 +27,7 @@ use Illuminate\Http\Request;
 // 		]);
 // 	});
 
-//     $router->post('filter-word', 'FilterWordController@check');
+    $router->post('filter-word', 'FilterWordController@check');
 
 // 	$router->group(['prefix' => 'pageview', 'as' => 'pageview.'], function ($router) {
 // 		/*提交页面时长数据*/
@@ -44,4 +44,4 @@ use Illuminate\Http\Request;
 // 			'as' => 'store',
 // 		]);
 // 	});
-// });
+});
