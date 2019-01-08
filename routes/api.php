@@ -13,35 +13,35 @@ use Illuminate\Http\Request;
 |
 */
 
-$router->group(['namespace' => 'Api'], function ($router) {
-	$router->group(['prefix' => 'wechat', 'as' => 'wechat.'], function ($router) {
-		/*提交微信数据*/
-		$router->post('/', [
-			'uses' => 'WechatController@store',
-			'as' => 'store',
-		]);
+// $router->group(['namespace' => 'Api'], function ($router) {
+// 	$router->group(['prefix' => 'wechat', 'as' => 'wechat.'], function ($router) {
+// 		/*提交微信数据*/
+// 		$router->post('/', [
+// 			'uses' => 'WechatController@store',
+// 			'as' => 'store',
+// 		]);
 
-		$router->get('login', [
-			'uses' => 'WechatController@login',
-			'as' => 'login',
-		]);
-	});
+// 		$router->get('login', [
+// 			'uses' => 'WechatController@login',
+// 			'as' => 'login',
+// 		]);
+// 	});
 
-    $router->post('filter-word', 'FilterWordController@check');
+//     $router->post('filter-word', 'FilterWordController@check');
 
-	$router->group(['prefix' => 'pageview', 'as' => 'pageview.'], function ($router) {
-		/*提交页面时长数据*/
-		$router->post('/', [
-			'uses' => 'PageViewController@store',
-			'as' => 'store',
-		]);
-	});
+// 	$router->group(['prefix' => 'pageview', 'as' => 'pageview.'], function ($router) {
+// 		/*提交页面时长数据*/
+// 		$router->post('/', [
+// 			'uses' => 'PageViewController@store',
+// 			'as' => 'store',
+// 		]);
+// 	});
 
-	$router->group(['prefix' => 'cardview', 'as' => 'cardview.'], function ($router) {
-		/*提交卡片数据*/
-		$router->post('/', [
-			'uses' => 'CardViewController@store',
-			'as' => 'store',
-		]);
-	});
-});
+// 	$router->group(['prefix' => 'cardview', 'as' => 'cardview.'], function ($router) {
+// 		/*提交卡片数据*/
+// 		$router->post('/', [
+// 			'uses' => 'CardViewController@store',
+// 			'as' => 'store',
+// 		]);
+// 	});
+// });

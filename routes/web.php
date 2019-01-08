@@ -20,27 +20,28 @@
 //     require(__DIR__ . '/frontend/index.php');
 // });
 // 
-$router->get('/', function () {
-    return redirect()->route('admin.user.index');
-});
+
+// $router->get('/', function () {
+//     return redirect()->route('admin.user.index');
+// });
 
 // backend
-Route::group(['prefix' => 'admin'], function ($router) {
-    /*登录*/
-    Auth::routes();
+// Route::group(['prefix' => 'admin'], function ($router) {
+//     /*登录*/
+//     Auth::routes();
 
-    $router->group(['namespace' => 'Auth'], function($router) {
-        $router->get('/logout', [
-            'uses' => 'LoginController@logout',
-            'as' => 'logout'
-        ]);
-    });
+//     $router->group(['namespace' => 'Auth'], function($router) {
+//         $router->get('/logout', [
+//             'uses' => 'LoginController@logout',
+//             'as' => 'logout'
+//         ]);
+//     });
 
-    $router->get('/', function () {
-        return redirect()->route('login');
-    });
+//     $router->get('/', function () {
+//         return redirect()->route('login');
+//     });
     
-    $router->group(['as' => 'admin.'], function ($router) {
-        require(__DIR__ . '/backend/index.php');
-    });
-});
+//     $router->group(['as' => 'admin.'], function ($router) {
+//         require(__DIR__ . '/backend/index.php');
+//     });
+// });

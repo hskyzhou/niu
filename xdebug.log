@@ -205,3 +205,23 @@ W: Creating socket for '10.0.1.192:9002', poll success, but error: Operation now
 E: Could not connect to client. :-(
 Log closed at 2018-12-24 09:50:13
 
+Log opened at 2019-01-06 13:50:54
+I: Connecting to configured address/port: 10.0.1.192:9002.
+E: Time-out connecting to client (Waited: 200 ms). :-(
+Log closed at 2019-01-06 13:50:54
+
+Log opened at 2019-01-06 13:54:09
+I: Connecting to configured address/port: 10.0.1.192:9002.
+E: Time-out connecting to client (Waited: 200 ms). :-(
+Log closed at 2019-01-06 13:54:09
+
+Log opened at 2019-01-06 13:57:10
+I: Connecting to configured address/port: 10.0.1.192:9002.
+E: Time-out connecting to client (Waited: 200 ms). :-(
+Log closed at 2019-01-06 13:57:10
+
+Log opened at 2019-01-06 14:08:17
+I: Connecting to configured address/port: 10.0.1.192:9002.
+E: Time-out connecting to client (Waited: 200 ms). :-(
+Log closed at 2019-01-06 14:08:17
+
